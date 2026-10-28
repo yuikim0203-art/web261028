@@ -1,35 +1,52 @@
-document.write("외부 스크립트 방법");
-console.log("콘솔창에 나와야 하는 내용");
+// script.js : 내 영화 평점 통계(콘솔판)
+// 작성자 : 김유이(2651015)
 
-var num = 10 + 20;
-console.log(num);
+const titles = ["인터스텔라", "듄 파트1", "듄 파트2", "드래곤 길들이기", "이방인"];
+const ratings = [8.4, 7.9, 9.0, 6.5, 8.1];
+const years = [2014, 2019, 1994, 2023, 2008];
 
-let sum = 80 + 1234;
-console.log(sum);
+let sum = 0;
 
-let string1 = "Hello, worold";
-let string2 = "시네마 웹사이트 \'Cinema Website\'에 오신것을 환영합니다.";
-
-console.log(string1, string2);
-
-let dan = 3;
-let gugu = 8;
-let string = `${dan} 곱하기 ${gugu}은/는 ${dan * gugu}입니다`;
-console.log(string);
-
-let stdScore = {
-    koeranSc : 80,
-    englishSc : 70,
-    mathSc : 90,
-    scieneSc : 60
-};
-
-console.log(stdScore.koeranSc);
-
-dan = 2;
-for(let i = 1; i < 10; i++){
-    for(let j = 1; i < 10; i++){
-        console.log(`${i} X ${j} = ${i * j}`);
-    }
-    console.log('   ');
+for (let i = 0; i<ratings.length; i++) {
+    sum = sum + ratings[i];
 }
+console.log("합계:", sum);
+
+const average = sum / ratings.length
+console.log("평균:", average)
+
+let max = ratings[0];
+let maxindex = 0;
+
+let count = 0;
+let label;
+
+for(let i = 0; i<ratings.length; i++){
+
+    if(ratings[i] >= 8){
+        count++;
+    }
+
+    if(ratings[i] > max){
+        max = ratings[i];
+        maxindex = i;
+    }
+
+    if(label > 8.5){
+        label = "명작";        
+    }
+    else{
+        if(label > 7){
+            label = "추천";
+        }
+        else{
+            label = "보통";
+        }
+    }
+
+    console.log(titles[i] + "(" + years[i] + ") : " + ratings[i] + " " + label);
+}
+
+console.log("최고:", titles[maxindex], max);
+console.log("8점 이상" + count + "편");
+
