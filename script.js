@@ -25,3 +25,8 @@ let stdScore = {
 };
 
 console.log(stdScore.koeranSc);
+
+dan = 2;
+for(let i = 1; i < 10; i++){
+    document.log(`${dan} X ${i} = ${dan * i}`);
+}
