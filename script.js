@@ -16,3 +16,12 @@ let dan = 3;
 let gugu = 8;
 let string = `${dan} 곱하기 ${gugu}은/는 ${dan * gugu}입니다`;
 console.log(string);
+
+let stdScore = {
+    koeranSc : 80,
+    englishSc : 70,
+    mathSc : 90,
+    scieneSc : 60
+};
+
+console.log(stdScore.koeranSc);
