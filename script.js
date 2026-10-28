@@ -14,5 +14,5 @@ console.log(string1, string2);
 
 let dan = 3;
 let gugu = 8;
-let string = '${dan} 곱하기 ${gugu}은/는 ${dan * gugu}입니다';
+let string = `${dan} 곱하기 ${gugu}은/는 ${dan * gugu}입니다`;
 console.log(string);
