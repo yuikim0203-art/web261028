@@ -9,3 +9,8 @@ console.log(num);
 let sum = 80 + 1234;
 
 console.log(sum);
+
+let string1 = "Hello, worold";
+let string2 = "시네마 웹사이트 'Cinema Website'에 오신것을 환영합니다.";
+
+console.log(string1, string2);
